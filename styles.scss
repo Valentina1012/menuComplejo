@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #131313;
+    --color2: #654dce;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    background: var(--color1);
+    color: #fff;
+    width: 100%;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 20px 25px;
+
+        &:hover {
+            color: #000;
+            background: var(--color2);
+        }
+    }
+}
+
+.menu .mobile {
+    display: none;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 25px;
+
+        &-logo {
+            min-width: 250px;
+        }
+
+        &-more {
+            button {
+                border: none;
+                background: var(--color1);
+                padding: 15px;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.menu .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    &-primary,
+    &-secondary {
+        display: flex;
+    }
+
+    &-secondary.mini {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 853px) {
+    .menu .logo {
+        min-width: 100px;
+    }
+
+    .menu .desktop-secondary.full {
+        display: none;
+    }
+
+    .menu .desktop-secondary.mini {
+        display: block !important;
+
+        &-submenu {
+            position: absolute;
+            display: none;
+            background: var(--color1);
+            width: 200px;
+            right: 0;
+        }
+    }
+
+    .desktop-secondary.mini:hover .desktop-secondary.mini-submenu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu .desktop {
+        display: none;
+    }
+
+    .menu .mobile {
+        display: block;
+    }
+}
