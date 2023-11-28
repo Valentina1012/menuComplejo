@@ -72,6 +72,10 @@ body {
   cursor: pointer;
 }
 
+.collapsed {
+  display: none;
+}
+
 .menu .desktop {
   display: flex;
   justify-content: space-between;

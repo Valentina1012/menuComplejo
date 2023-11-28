@@ -8,6 +8,7 @@
     --color1: #131313;
     --color2: #654dce;
 }
+
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -69,16 +70,18 @@ body {
             min-width: 250px;
         }
 
-        &-more {
-            button {
-                border: none;
-                background: var(--color1);
-                padding: 15px;
-                color: #fff;
-                cursor: pointer;
-            }
+        &-more button {
+            border: none;
+            background: var(--color1);
+            padding: 15px;
+            color: #fff;
+            cursor: pointer;
         }
     }
+}
+
+.collapsed {
+    display: none;
 }
 
 .menu .desktop {
